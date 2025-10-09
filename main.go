@@ -13,6 +13,6 @@ func main() {
 	case "reverse":
 		fmt.Println("ファイルの中身を逆にします")
 	default:
-		fmt.Println("コマンドが存在しません")
+		panic("コマンドが存在しません")
 	}
 }
