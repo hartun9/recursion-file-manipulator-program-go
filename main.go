@@ -18,7 +18,11 @@ func main() {
 		fmt.Println("ファイルの中身を逆にします")
 		fmt.Println("fileInput: ", fileInput)
 		fmt.Println("fileOutput: ", fileOutput)
+		reverse(fileInput, fileOutput)
 	default:
 		panic("コマンドが存在しません")
 	}
+}
+
+func reverse(fileInput string, fileOutput string) {
 }
