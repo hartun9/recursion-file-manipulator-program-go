@@ -38,12 +38,22 @@ func reverse(inputPath string, outputPath string) {
 
 // copy inputpath にあるファイルのコピーを作成し、outputpath として保存する。
 func copy(inputPath string, outputPath string) {
+	fmt.Println("ファイルをコピーします")
+	fmt.Println("inputPath: ", inputPath)
+	fmt.Println("outputPath: ", outputPath)
 }
 
 // deplicateContents inputpath にあるファイルの内容を読み込み、その内容を複製し、複製された内容を inputpath に n 回複製する。
 func deplicateContents(inputPath string, n int) {
+	fmt.Println("ファイルの内容をn回複製します")
+	fmt.Println("inputPath: ", inputPath)
+	fmt.Println("n: ", n)
 }
 
 // replaceString inputpath にあるファイルの内容から文字列 'needle' を検索し、'needle' の全てを 'newstring' に置き換える。
 func replaceString(inputPath string, needle string, newString string) {
+	fmt.Println("needleをnewStringに置き換えます")
+	fmt.Println("inputPath: ", inputPath)
+	fmt.Println("needle: ", needle)
+	fmt.Println("newString: ", newString)
 }
