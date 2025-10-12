@@ -17,7 +17,7 @@ func main() {
 	case "copy":
 		copy(os.Args[2], os.Args[3])
 	case "duplicate-contents":
-		n, err := strconv.Atoi(os.Args[4])
+		n, err := strconv.Atoi(os.Args[3])
 		if err != nil {
 			panic(err)
 		}
