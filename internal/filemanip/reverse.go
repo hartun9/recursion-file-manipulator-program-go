@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"fmt"
@@ -7,8 +7,8 @@ import (
 	"strings"
 )
 
-// reverse fileInput の内容を反転させ、その結果をfileOutputに書き出す。
-func reverse(inputPath string, outputPath string) {
+// Reverse fileInput の内容を反転させ、その結果をfileOutputに書き出す。
+func Reverse(inputPath string, outputPath string) {
 	fmt.Println("ファイルの中身を逆にします")
 	fmt.Println("inputPath: ", inputPath)
 	fmt.Println("outputPath: ", outputPath)

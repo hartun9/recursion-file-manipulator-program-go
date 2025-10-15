@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"fmt"
@@ -7,8 +7,8 @@ import (
 	"strings"
 )
 
-// replaceString inputpath にあるファイルの内容から文字列 'needle' を検索し、'needle' の全てを 'newstring' に置き換える。
-func replaceString(inputPath string, needle string, newString string) {
+// ReplaceString inputpath にあるファイルの内容から文字列 'needle' を検索し、'needle' の全てを 'newstring' に置き換える。
+func ReplaceString(inputPath string, needle string, newString string) {
 	fmt.Println("needleをnewStringに置き換えます")
 	fmt.Println("inputPath: ", inputPath)
 	fmt.Println("needle: ", needle)

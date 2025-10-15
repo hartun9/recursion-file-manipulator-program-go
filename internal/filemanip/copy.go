@@ -1,12 +1,12 @@
-package main
+package filemanip
 
 import (
 	"fmt"
 	"os"
 )
 
-// copy inputpath にあるファイルのコピーを作成し、outputpath として保存する。
-func copy(inputPath string, outputPath string) {
+// Copy inputpath にあるファイルのコピーを作成し、outputpath として保存する。
+func Copy(inputPath string, outputPath string) {
 	fmt.Println("ファイルをコピーします")
 	fmt.Println("inputPath: ", inputPath)
 	fmt.Println("outputPath: ", outputPath)

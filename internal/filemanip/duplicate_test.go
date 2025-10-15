@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"os"
@@ -84,7 +84,7 @@ func TestDeplicateContents(t *testing.T) {
 			inputFile.Close()
 
 			// deplicateContents関数を実行
-			deplicateContents(inputFile.Name(), tt.n)
+			DeplicateContents(inputFile.Name(), tt.n)
 
 			// ファイルの内容を読み込む
 			result, err := os.ReadFile(inputFile.Name())
@@ -108,5 +108,5 @@ func TestDeplicateContentsFileNotFound(t *testing.T) {
 		}
 	}()
 
-	deplicateContents("/non/existent/file.txt", 1)
+	DeplicateContents("/non/existent/file.txt", 1)
 }

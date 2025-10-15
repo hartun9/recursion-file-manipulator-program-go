@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"os"
@@ -63,7 +63,7 @@ func TestCopy(t *testing.T) {
 			defer os.Remove(outputPath)
 
 			// copy関数を実行
-			copy(inputFile.Name(), outputPath)
+			Copy(inputFile.Name(), outputPath)
 
 			// 出力ファイルの内容を読み込む
 			result, err := os.ReadFile(outputPath)
@@ -94,5 +94,5 @@ func TestCopyFileNotFound(t *testing.T) {
 	defer os.Remove(outputFile.Name())
 	outputFile.Close()
 
-	copy("/non/existent/file.txt", outputFile.Name())
+	Copy("/non/existent/file.txt", outputFile.Name())
 }

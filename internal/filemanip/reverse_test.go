@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"os"
@@ -63,7 +63,7 @@ func TestReverse(t *testing.T) {
 			defer os.Remove(outputPath)
 
 			// reverse関数を実行
-			reverse(inputFile.Name(), outputPath)
+			Reverse(inputFile.Name(), outputPath)
 
 			// 出力ファイルの内容を読み込む
 			result, err := os.ReadFile(outputPath)
@@ -94,5 +94,5 @@ func TestReverseFileNotFound(t *testing.T) {
 	defer os.Remove(outputFile.Name())
 	outputFile.Close()
 
-	reverse("/non/existent/file.txt", outputFile.Name())
+	Reverse("/non/existent/file.txt", outputFile.Name())
 }

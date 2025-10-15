@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"github.com/hartun9/recursion-file-manipulator-program-go/internal/filemanip"
 )
 
 func main() {
@@ -13,17 +15,17 @@ func main() {
 
 	switch action {
 	case "reverse":
-		reverse(os.Args[2], os.Args[3])
+		filemanip.Reverse(os.Args[2], os.Args[3])
 	case "copy":
-		copy(os.Args[2], os.Args[3])
+		filemanip.Copy(os.Args[2], os.Args[3])
 	case "duplicate-contents":
 		n, err := strconv.Atoi(os.Args[3])
 		if err != nil {
 			panic(err)
 		}
-		deplicateContents(os.Args[2], n)
+		filemanip.DeplicateContents(os.Args[2], n)
 	case "replace-string":
-		replaceString(os.Args[2], os.Args[3], os.Args[4])
+		filemanip.ReplaceString(os.Args[2], os.Args[3], os.Args[4])
 	default:
 		panic("コマンドが存在しません")
 	}
