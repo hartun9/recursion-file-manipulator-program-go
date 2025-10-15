@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-// deplicateContents inputpath にあるファイルの内容を読み込み、その内容を複製し、複製された内容を inputpath に n 回複製する。
-func deplicateContents(inputPath string, n int) {
+// DeplicateContents inputpath にあるファイルの内容を読み込み、その内容を複製し、複製された内容を inputpath に n 回複製する。
+func DeplicateContents(inputPath string, n int) {
 	fmt.Println("ファイルの内容をn回複製します")
 	fmt.Println("inputPath: ", inputPath)
 	fmt.Println("n: ", n)

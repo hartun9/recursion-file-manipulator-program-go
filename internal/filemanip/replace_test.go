@@ -1,4 +1,4 @@
-package main
+package filemanip
 
 import (
 	"os"
@@ -108,7 +108,7 @@ func TestReplaceString(t *testing.T) {
 			inputFile.Close()
 
 			// replaceString関数を実行
-			replaceString(inputFile.Name(), tt.needle, tt.newString)
+			ReplaceString(inputFile.Name(), tt.needle, tt.newString)
 
 			// ファイルの内容を読み込む
 			result, err := os.ReadFile(inputFile.Name())
@@ -132,5 +132,5 @@ func TestReplaceStringFileNotFound(t *testing.T) {
 		}
 	}()
 
-	replaceString("/non/existent/file.txt", "needle", "newstring")
+	ReplaceString("/non/existent/file.txt", "needle", "newstring")
 }
